@@ -62,7 +62,7 @@ class App extends Component {
           </Comentario>
         ))}
 
-        <form method="post" onSubmit={this.adicionarComentario}>
+        <form method="post" onSubmit={this.adicionarComentario} className="Novo-Comentario">
           <h2>Adicionar um comentário</h2>
           <div>
             <input 
@@ -70,6 +70,7 @@ class App extends Component {
               name="nome" 
               value={this.state.novoComentario.nome}
               onChange={this.digitacao}
+              required
               placeholder="Digite seu nome"></input>
           </div>
           <div>
@@ -78,6 +79,7 @@ class App extends Component {
               name="email" 
               value={this.state.novoComentario.email}
               onChange={this.digitacao}
+              required
               placeholder="Digite seu email"></input>
           </div>
           <div>
